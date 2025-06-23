@@ -1,0 +1,70 @@
+    /* Brand */
+    .navbar-brand {
+      font-size: 1.6rem;
+      color: #65d6d4c7 !important;
+      transition: color 0.3s ease;
+    }
+
+    .navbar-brand:hover {
+      color: #082a1f !important;
+    }
+
+    /* Nav links */
+    .navbar-nav .nav-link {
+      color: #000000 !important;
+      padding: 0.6rem 1rem;
+      font-size: 1rem;
+      transition: all 0.3s ease-in-out;
+      position: relative;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: #35c6c6 !important;
+      transform: scale(1.05);
+    }
+
+    /* Active link styling */
+    .navbar-nav .nav-link.active {
+      color: #40d2e3 !important;
+    }
+
+    /* Underline animation */
+    .navbar-nav .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      bottom: 0;
+      left: 50%;
+      background-color: #72bbe8;
+      transition: all 0.3s ease-in-out;
+      transform: translateX(-50%);
+    }
+
+    .navbar-nav .nav-link:hover::after,
+    .navbar-nav .nav-link.active::after {
+      width: 60%;
+    }
+
+    /* Responsive nav menu */
+    @media (max-width: 991.98px) {
+      .navbar-nav {
+        background-color: #2373c3cf;
+        padding: 1rem 0;
+      }
+
+      .navbar-collapse {
+        animation: slideDown 0.4s ease forwards;
+      }
+
+      @keyframes slideDown {
+        0% {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    }
